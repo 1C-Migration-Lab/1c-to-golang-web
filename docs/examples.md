@@ -75,17 +75,17 @@ type ТоварыЗаказа struct {
 
 ### Сгенерированная форма
 ```html
-<form id="заказПокупателя" class="form">
+<form id="customerOrder" class="form">
     <div class="form-group">
-        <label for="номер">Номер</label>
-        <input type="text" id="номер" name="номер" class="form-control">
+        <label for="number">Номер</label>
+        <input type="text" id="number" name="number" class="form-control">
     </div>
     <div class="form-group">
-        <label for="дата">Дата</label>
-        <input type="datetime-local" id="дата" name="дата" class="form-control">
+        <label for="date">Дата</label>
+        <input type="datetime-local" id="date" name="date" class="form-control">
     </div>
     
-    <table id="товары" class="table">
+    <table id="items" class="table">
         <thead>
             <tr>
                 <th>Номенклатура</th>
