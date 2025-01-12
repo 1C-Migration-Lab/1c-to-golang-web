@@ -56,18 +56,22 @@
 
 ### Сгенерированные структуры
 ```go
-type ЗаказПокупателя struct {
-    ID          string    `json:"id"`
-    Номер       string    `json:"номер"`
-    Дата        time.Time `json:"дата"`
-    Товары      []ТоварыЗаказа `json:"товары"`
+package models
+import "time"
+// CustomerOrder соответствует "ЗаказПокупателя"
+type CustomerOrder struct {
+    ID      string      `json:"id"`
+    Number  string      `json:"number"`
+    Date    time.Time   `json:"date"`
+    Items   []OrderItem `json:"items"`
 }
 
-type ТоварыЗаказа struct {
-    Номенклатура string  `json:"номенклатура"`
-    Количество   float64 `json:"количество"`
-    Цена         float64 `json:"цена"`
-    Сумма        float64 `json:"сумма"`
+// OrderItem соответствует строкам табличной части "Товары"
+type OrderItem struct {
+    Product     string  `json:"product"`
+    Quantity    float64 `json:"quantity"`
+    Price       float64 `json:"price"`
+    Total       float64 `json:"total"`
 }
 ```
 
